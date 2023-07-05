@@ -29,11 +29,18 @@ nav {
   font-size: 18px;
 }
 
+.logo {
+  cursor: pointer;
+}
+
 nav ul {
   display: flex;
   gap: 3rem;
 }
 
+nav ul li {
+  cursor: pointer;
+}
 nav ul li:hover {
   color: var(--btn-color);
   transition: 0.2s ease-in-out;
@@ -72,15 +79,15 @@ button {
 
     height: 10dvh;
   }
-  .nav-links {
+  #nav-links {
     display: none;
   }
 
-  .nav-wrapper.active {
+  #navWrapper.active {
     height: 90dvh;
     background-color: var(--med-bg-color);
   }
-  .nav-links.active {
+  #nav-links.active {
     display: flex;
     flex-direction: column;
     text-align: center;
