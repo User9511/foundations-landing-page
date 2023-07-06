@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +16,14 @@
   --btn-color: #3882f6;
 }
 
+body {
+  font-family: "Oswald", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
 /* Header */
 header {
   background-color: var(--dark-bg-color);
@@ -22,10 +32,11 @@ header {
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: var(--hero-main-text);
   max-width: 80rem;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1.5rem;
   font-size: 18px;
 }
 
@@ -55,6 +66,55 @@ button {
   background: none;
   border: 0;
   cursor: pointer;
+}
+
+/* Header Container */
+.header-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  color: var(--hero-main-text);
+}
+
+.header-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+p {
+  font-size: 1.5rem;
+  color: rgb(220, 216, 216);
+  width: 75%;
+}
+
+.btn {
+  display: block;
+  text-align: center;
+  background-color: var(--btn-color);
+  color: var(--hero-main-text);
+  padding: 0.5rem;
+  width: 8rem;
+  border-radius: 0.5rem;
+  font-weight: bolder;
+}
+.btn:hover {
+  transition: 0.2s ease-in-out;
+  background-color: transparent;
+  outline: 1px solid var(--btn-color);
+}
+
+.hero-img {
+  border: 4px solid white;
 }
 
 /* Mobile View */
@@ -147,5 +207,30 @@ button {
   }
   .bar.active::after {
     transform: rotate(-45deg) translate(35px, 35px);
+  }
+
+  /* Header Container */
+  .header-container {
+    grid-template-columns: 1fr;
+    /* padding: 4rem 1.5rem; */
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .header-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    text-align: center;
+    width: 100%;
+    font-size: 1.3rem;
   }
 }
