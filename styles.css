@@ -53,7 +53,12 @@ nav ul {
 nav ul li {
   cursor: pointer;
 }
-nav ul li:hover {
+
+a {
+  color: var(--hero-main-text);
+}
+
+nav ul li a:hover {
   color: var(--btn-color);
   transition: 0.2s ease-in-out;
 }
