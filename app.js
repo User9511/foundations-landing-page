@@ -11,7 +11,9 @@ mobileMenuTrigger.addEventListener("click", function () {
   const navWrapper = document.getElementById("navWrapper");
   const navLinks = document.getElementById("nav-links");
   const bars = document.querySelector(".bar");
+  const body = document.querySelector("body");
   navWrapper.classList.toggle("active");
   navLinks.classList.toggle("active");
   bars.classList.toggle("active");
+  body.classList.toggle("no-scroll");
 });
